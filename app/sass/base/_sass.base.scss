@@ -1,0 +1,26 @@
+$f-main: Verdana, Arial, Helvetica, sans-serif;
+$f-code: 'Fira Mono', monospace;
+
+body{
+	font:{
+		family: $f-main;
+		size: 82.5%;
+	}
+}
+
+code{
+	font-family: $f-code;
+}
+
+ul, ol{
+	padding: 1em 0;
+	padding-left: 4em;
+	line-height: 1.8;
+}
+
+ul{
+	list-style-type: disc;
+}
+ol{
+	list-style-type: decimal;
+}

@@ -1,0 +1,35 @@
+$c-f-heads: #000;
+
+@mixin mix-h($f-size){
+	font: {
+		size: $f-size;
+	}
+	padding: 1em 0;
+	color: $c-f-heads;
+}
+
+.mod-pub{
+	max-width: 1000px;
+	margin: 2em;
+	color: #444;
+
+	h2{
+		@include mix-h(2.2em)
+	}
+
+	h3{
+		@include mix-h(2em)
+	}
+
+	h4{
+		@include mix-h(1.44em)
+	}
+	h5{
+		@include mix-h(1.22em)
+	}
+
+	p{
+		padding: 1em 0;
+		line-height: 1.8;
+	}
+}

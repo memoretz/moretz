@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Flexbox</title>
+
+	<link rel="stylesheet" type="text/css" href="../../../css/css.collector.css">
+	<link rel="stylesheet" type="text/css" href="css/css.pub.css">
+</head>
+<body>
+	<article class="mod-pub">
+		<header>
+			<h2>Flexbox</h2>
+			<p><a href="https://www.w3.org/TR/2016/CR-css-flexbox-1-20160526/">W3C Спецификация</a></p>
+		</header>
+		<section>
+			<h3>display: flex, display: inline-flex</h3>
+			<div class="demo demo1">
+				<div class="demo-title">
+					<code>display: flex;</code>
+				</div>
+				<div class="demo-expo">
+					<div class="flexbox">
+						<div>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos id fuga, saepe aspernatur eaque maiores reprehenderit quis nisi enim sit asperiores dolorum! Ex consectetur neque non sed possimus. Officia, ducimus.
+					</div>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus inventore placeat expedita saepe consequatur dolore voluptas, tempore omnis, laborum quos ratione est, accusamus deleniti odio facere ipsam suscipit sed! Animi.
+					<div>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium odio expedita deserunt incidunt cumque error adipisci maiores velit enim earum quaerat at necessitatibus explicabo est suscipit inventore, dolorum tenetur debitis!
+					</div>
+					<img src="media/bomber.jpg" alt="bomber">
+					</div>
+					<span>some paragraph</span>
+				</div>
+			</div>
+
+			<div class="demo demo2">
+				<div class="demo-title">
+					<code>display: inline-flex;</code>
+				</div>
+				<div class="demo-expo">
+					<div class="flexbox">
+						<div>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos id fuga, saepe aspernatur eaque maiores reprehenderit quis nisi enim sit asperiores dolorum! Ex consectetur neque non sed possimus. Officia, ducimus.
+					</div>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus inventore placeat expedita saepe consequatur dolore voluptas, tempore omnis, laborum quos ratione est, accusamus deleniti odio facere ipsam suscipit sed! Animi.
+					<div>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium odio expedita deserunt incidunt cumque error adipisci maiores velit enim earum quaerat at necessitatibus explicabo est suscipit inventore, dolorum tenetur debitis!
+					</div>
+					<img src="media/bomber.jpg" alt="bomber">
+					</div>
+					<span>some paragraph</span>
+				</div>
+			</div>
+
+			<ul>
+				<li><code>float</code>-элементы не нарушают flex-контейнер</li>
+				<li>поля flex-контейнера не коллапсируют с полями содержимого</li>
+				<li>свойства <code>column-*</code> не влияют на flex-контейнер</li>
+				<li><code>float</code> и <code>clear</code> не действуют на flex-элемент и не вытаскивают его из потока</li>
+			
+				<li><code>vertical-align</code> не действует на flex-элемент</li>
+				<li>не действуют на flex-контейнер псевдоэлементы <code>::first-letter</code> и <code>::first-line</code>. Flex-контейнеры не распространяют первую форматируемую строку или первую форматируемую букву на свои дочерние элементы</li>
+			</ul>
+		</section>
+		<section>
+			<h3>flex-элементы</h3>
+			<ul>
+				<li>Каждый дочерний элемент flex-контейнера становится flex-элементом</li>
+				<li>Простые строки текста внутри flex-контейнера оборачиваются анонимным flex-элементом</li>
+				<li>Анонимный flex-элемент, состоящий только из пустого пространства (того, что можно стилизовать с помощью <code>white-space</code> не отрисовывается (все равно, что его <code>display: none;</code>)</li>
+				<li>значения <code>display</code> flex-элементов облочняются</li>
+				
+			</ul>
+		</section>
+		<section>
+			<h3>Абсолютно позиционированные flex'ы</h3>
+			<ul>
+				<li>Абсолютно позиционированные дочерние элементы flex-контейнера не участвуют в flex-раскладке, так как вынимаются из потока.</li>
+				<li>Позиция <code>static</code> дочернего элемента flex-контейнера приводит к тому, что он становится единственным flex-элементом в отдельном flex-контейнере. Значение <code>align-self: auto;</code> идентично <code>start</code></li>
+				
+			</ul>
+		</section>
+		<section>
+			<h3>Поля и отступы flex-элементов</h3>
+			<ul>
+				<li>Поля соседних flex-элементов не коллапсируют</li>
+				
+			</ul>
+		</section>
+		<section>
+			<h3>z-порядок flex-элементов</h3>
+			<ul>
+				<li>Значения <code>z-index</code>, отличные от <code>auto</code> создают новый контекст форматирования даже, если <code>position</code> в значении <code>static</code></li>
+				<li>Потомки, позиционированные вне flex-элемента, по-прежнему участвуют в любом контексте форматирования, который он устанавливает</li>
+				
+			</ul>
+		</section>
+		<section>
+			<h3>Коллапсирование элементов</h3>
+			<ul>
+				<li>Если задать flex-элементу <code>visibility: collapse;</code>, он становится сколлапсировавшим flex-элементом с похожим эффектом, которое создает  <code>visibility: collapse;</code> для строки или столбца таблицы: сколлапсировавший элемент удаляется из воспроизведения целиком, но оставляет после себя <code>strut</code>, который держит поперечную сторону flex-строки в стабильности</li>
+				<li>Несмотря на то, что сколлапсировавшие элементы не отображаются, они по-прежнему остаются в структуре форматирования</li>
+				<li>В отличие от элементов с <code>display: none;</code>, для flex-элементов, которые сколлапсировали по-прежнему действуют эффекты, зависящие от присутствия бокса в структуре форматирования (например, инкрементирование счетчиков или анимации с переходами</li>
+			</ul>
+
+			<div class="demo demo3">
+				<div class="demo-title">
+					<code>visibility: collapse;</code>
+				</div>
+				<div class="demo-expo">
+					<div class="flexbox">
+						<div>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae maiores laboriosam minus sunt debitis, repellat expedita ullam, officia numquam, inventore asperiores, eligendi fugit qui a temporibus magni commodi cumque odit!
+						</div>
+						<div class="collapsed">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis a porro cupiditate totam, vero distinctio, libero non quo necessitatibus molestias sit aspernatur impedit, quae ex aperiam adipisci quasi! Laudantium, necessitatibus?
+						</div>
+						<img src="media/bomber.jpg" alt="bomber">
+						<div>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum maiores omnis tempore ipsum fugit praesentium magni error consequatur rerum at, doloribus dolorem nobis temporibus neque. Soluta, architecto pariatur recusandae exercitationem!
+						</div>
+					</div>
+				</div>
+			</div>
+			<p>
+				Для того, чтобы расчитать размер страта, flex-макет сначала представляется со всеми не сколлапсировавшими элементами, а затем перезапускается со всеми сколлапсировавшими элементами, замененными на страты.
+			</p>
+		</section>
+		<section>
+			<h3>Минимальный размер flex-элементов</h3>
+			<p>
+				Для обеспечения более адекватного минимального размера flex-элементов по умолчанию, добавлено новое значение <code>auto</code> в качестве начального для свойств <code>min-width</code> и <code>min-height</code>. Вычисленное значение для него - как в css или абсолютная длина или ключевое слово.
+				
+			</p>
+			<p>
+					<code>auto</code> - для flex-элемента, значение <code>overflow</code> которого <code>visible</code> на главной оси и при определении для свойства <code>min-size</code> - задает автоматический минимальный размер. Иначе <code>0</code>.
+				</p>
+				
+		</section>
+		<section>
+			<h3>
+				<code>flex-direction</code>
+			</h3>
+			<table class="css-prop-table">
+				<tr>
+					<td>Название</td>
+					<td><code>flex-direction</code></td>
+				</tr>
+				<tr>
+					<td>Значения</td>
+					<td><code>row | row-reverse | column | column-reverse</code></td>
+				</tr>
+				<tr>
+					<td>Начальное</td>
+					<td><code>row</code></td>
+				</tr>
+				<tr>
+					<td>Применяется</td>
+					<td>к flex-контейнеру</td>
+				</tr>
+				<tr>
+					<td>Наследуется</td>
+					<td>нет</td>
+				</tr>
+				<tr>
+					<td>Вычисленное значение</td>
+					<td>как в css</td>
+				</tr>
+				<tr>
+					<td>Анимация</td>
+					<td>дискретная</td>
+				</tr>
+			</table>
+			<p>
+				Задает направление главной оси и то, как flex-элементы располагаются во flex-контейнере
+			</p>
+			<div class="demo demo5">
+				<div class="demo-title">
+					<code>flex-direction: row;</code>
+				</div>
+				<div class="demo-expo">
+					<div class="flexbox">
+						<div>каждый</div>
+						<div>охотник</div>
+						<div>желает</div>
+						<div>знать</div>
+						<div>где</div>
+						<div>сидит</div>
+						<div>марв</div>
+						<div><img src="media/marv.jpg" alt="Marv"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="demo demo7">
+				<div class="demo-title">
+					<code>flex-direction: row-reverse;</code>
+				</div>
+				<div class="demo-expo">
+					<div class="flexbox">
+						<div>каждый</div>
+						<div>охотник</div>
+						<div>желает</div>
+						<div>знать</div>
+						<div>где</div>
+						<div>сидит</div>
+						<div>марв</div>
+						<div><img src="media/marv.jpg" alt="Marv"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="demo demo6">
+				<div class="demo-title">
+					<code>flex-direction: column;</code>
+				</div>
+				<div class="demo-expo">
+					<div class="flexbox">
+						<div>каждый</div>
+						<div>охотник</div>
+						<div>желает</div>
+						<div>знать</div>
+						<div>где</div>
+						<div>сидит</div>
+						<div>марв</div>
+						<div><img src="media/marv.jpg" alt="Marv"></div>
+					</div>
+				</div>
+			</div>
+			<div class="demo demo8">
+				<div class="demo-title">
+					<code>flex-direction: column-reverse;</code>
+				</div>
+				<div class="demo-expo">
+					<div class="flexbox">
+						<div>каждый</div>
+						<div>охотник</div>
+						<div>желает</div>
+						<div>знать</div>
+						<div>где</div>
+						<div>сидит</div>
+						<div>марв</div>
+						<div><img src="media/marv.jpg" alt="Marv"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section>
+			<h3><code>flex-wrap</code></h3>
+			<table class="css-prop-table">
+				<tr>
+					<td>Название</td>
+					<td><code>flex-wrap</code></td>
+				</tr>
+				<tr>
+					<td>Значения</td>
+					<td><code>nowrap | wrap | wrap-reverse</code></td>
+				</tr>
+				<tr>
+					<td>Начальное</td>
+					<td><code>nowrap</code></td>
+				</tr>
+				<tr>
+					<td>Применяется</td>
+					<td>к flex-контейнеру</td>
+				</tr>
+				<tr>
+					<td>Наследуется</td>
+					<td>нет</td>
+				</tr>
+				<tr>
+					<td>Вычисленное значение</td>
+					<td>как в css</td>
+				</tr>
+				<tr>
+					<td>Анимация</td>
+					<td>дискретная</td>
+				</tr>
+			</table>
+			<p>	В примерах всем flex-контейнерам выставлена ширина <code>width: 60%;</code></p>
+			<div class="demo demo11">
+				<div class="demo-title">
+					<code>flex-wrap: nowrap;</code>
+				</div>
+				<div class="demo-expo">
+					<div class="flexbox">
+						<div>есть</div>
+						<div>еще</div>
+						<div>славный</div>
+						<div>Дуайт</div>
+						<div><img src="media/duayet.png" alt="duayet"></div>
+						<div>в запасе</div>
+					</div>
+				</div>
+			</div>
+			<div class="demo demo9">
+				<div class="demo-title">
+					<code>flex-wrap: wrap;</code>
+				</div>
+				<div class="demo-expo">
+					<div class="flexbox">
+						<div>есть</div>
+						<div>еще</div>
+						<div>славный</div>
+						<div>Дуайт</div>
+						<div><img src="media/duayet.png" alt="duayet"></div>
+						<div>в запасе</div>
+					</div>
+				</div>
+			</div>
+			<div class="demo demo10">
+				<div class="demo-title">
+					<code>flex-wrap: wrap-reverse;</code>
+				</div>
+				<div class="demo-expo">
+					<div class="flexbox">
+						<div>есть</div>
+						<div>еще</div>
+						<div>славный</div>
+						<div>Дуайт</div>
+						<div><img src="media/duayet.png" alt="duayet"></div>
+						<div>в запасе</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section>
+			<h3><code>flex-flow</code></h3>
+			<table class="css-prop-table">
+				<tr>
+					<td>Название</td>
+					<td><code>flex-flow</code></td>
+				</tr>
+				<tr>
+					<td>Значения</td>
+					<td><code>flex-direction || flex-wrap</code></td>
+				</tr>
+				<tr>
+					<td>Начальное</td>
+					<td><code>row nowrap</code></td>
+				</tr>
+				<tr>
+					<td>Применяется</td>
+					<td>к flex-контейнеру</td>
+				</tr>
+				<tr>
+					<td>Наследуется</td>
+					<td>нет</td>
+				</tr>
+				<tr>
+					<td>Вычисленное значение</td>
+					<td>как в css</td>
+				</tr>
+				<tr>
+					<td>Анимация</td>
+					<td>дискретная</td>
+				</tr>
+			</table>
+		</section>
+	</article>
+</body>
+</html>

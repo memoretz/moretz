@@ -1,0 +1,74 @@
+/* display */
+
+.demo1{
+	
+}
+.demo1 .demo-expo .flexbox{
+	display: flex;
+	padding: 1em;
+}
+
+.demo2 .demo-expo .flexbox{
+	display: inline-flex;
+	padding: 1em;
+}
+
+/* collapse */
+
+.demo3 .demo-expo .flexbox{
+	display: flex;
+	padding: 1em;
+
+}
+
+.demo3 .collapsed{
+	visibility: collapse;
+}
+
+/* flex-direction */
+
+
+ .flexbox div{
+	padding: 2em;
+	border: 1px solid rgba(0,0,0,0.1);
+	background-color: rgba(0,0,0,0.05);
+}
+
+.demo5 .flexbox{
+	display: flex;
+	flex-direction: row;
+}
+
+.demo6 .flexbox{
+	display: flex;
+	flex-direction: column;
+}
+
+.demo7 .flexbox{
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+.demo8 .flexbox{
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+/* flex-wrap */
+.demo9 .flexbox{
+	width: 60%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.demo10 .flexbox{
+	width: 60%;
+	display: flex;
+	flex-wrap: wrap-reverse;
+}
+
+.demo11 .flexbox{
+	width: 60%;
+	display: flex;
+	flex-wrap: nowrap;
+}

@@ -1,0 +1,12 @@
+$b-demo: 1px solid rgba(0,0,0,0.15);
+
+.demo{
+	margin: 1em 0;
+	border: $b-demo;
+}
+
+.demo-title{
+	padding: 1em;
+	border-bottom: $b-demo;
+	line-height: 1.8;
+}
