@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Нативный JS и браузер</title>
+
+	<link rel="stylesheet" type="text/css" href="../../../css/css.collector.css">
+	<link rel="stylesheet" type="text/css" href="css/css.pub.css">
+</head>
+<body>
+	<article class="mod-pub">
+		<header>
+			<h2>JavaScript API</h2>
+			
+		</header>
+		<section>
+			<h3>Параметры окна браузера: <code>window.screen</code></h3>
+			<table class="js-api-table">
+				<tr>
+					<td>screen.width</td>
+					<td>ширина экрана клиента в пикселях</td>
+				</tr>
+				<tr>
+					<td>screen.height</td>
+					<td>высота экрана клиента в пикселях</td>
+				</tr>
+				<tr>
+					<td>screen.availWidth</td>
+					<td>ширина экрана клиента в пикселях минус браузерные  меню, скроллбары и проч.</td>
+				</tr>
+				<tr>
+					<td>screen.availHeight</td>
+					<td>высота экрана клиента в пикселях минус браузерные  меню, скроллбары и проч.</td>
+				</tr>
+				<tr>
+					<td>screen.colorDepth</td>
+					<td>глубина цвета</td>
+				</tr>
+				<tr>
+					<td>screen.pixelDepth</td>
+					<td>пиксельная глубина</td>
+				</tr>
+			</table>
+			<div class="demo">
+				<div class="demo-title">
+					<code>screen.width</code>
+				</div>
+				<div class="demo-expo">
+					
+				</div>
+				<script type="text/javascript">
+					(function(){
+						var demoExpos = Array.prototype.slice.call(document.querySelectorAll('.demo-expo'));
+						demoExpos[demoExpos.length-1].appendChild(document.createTextNode(screen.width));
+					})();
+				</script>
+			</div>
+			<div class="demo">
+				<div class="demo-title">
+					<code>screen.height</code>
+				</div>
+				<div class="demo-expo">
+					
+				</div>
+				<script type="text/javascript">
+					(function(){
+						var demoExpos = Array.prototype.slice.call(document.querySelectorAll('.demo-expo'));
+						demoExpos[demoExpos.length-1].appendChild(document.createTextNode(screen.height));
+					})();
+				</script>
+			</div>
+
+			<div class="demo">
+				<div class="demo-title">
+					<code>screen.availWidth</code>
+				</div>
+				<div class="demo-expo">
+					
+				</div>
+				<script type="text/javascript">
+					(function(){
+						var demoExpos = Array.prototype.slice.call(document.querySelectorAll('.demo-expo'));
+						demoExpos[demoExpos.length-1].appendChild(document.createTextNode(screen.availWidth));
+					})();
+				</script>
+			</div>
+
+			<div class="demo">
+				<div class="demo-title">
+					<code>screen.availHeight</code>
+				</div>
+				<div class="demo-expo">
+					
+				</div>
+				<script type="text/javascript">
+					(function(){
+						var demoExpos = Array.prototype.slice.call(document.querySelectorAll('.demo-expo'));
+						demoExpos[demoExpos.length-1].appendChild(document.createTextNode(screen.availHeight));
+					})();
+				</script>
+			</div>
+
+			<div class="demo">
+				<div class="demo-title">
+					<code>screen.colorDepth</code>
+				</div>
+				<div class="demo-expo">
+					
+				</div>
+				<script type="text/javascript">
+					(function(){
+						var demoExpos = Array.prototype.slice.call(document.querySelectorAll('.demo-expo'));
+						demoExpos[demoExpos.length-1].appendChild(document.createTextNode(screen.colorDepth));
+					})();
+				</script>
+			</div>
+
+			<div class="demo">
+				<div class="demo-title">
+					<code>screen.pixelDepth</code>
+				</div>
+				<div class="demo-expo">
+					
+				</div>
+				<script type="text/javascript">
+					(function(){
+						var demoExpos = Array.prototype.slice.call(document.querySelectorAll('.demo-expo'));
+						demoExpos[demoExpos.length-1].appendChild(document.createTextNode(screen.pixelDepth));
+					})();
+				</script>
+			</div>
+		</section>
+	</article>
+</body>
+</html>

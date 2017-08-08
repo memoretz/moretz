@@ -21,7 +21,7 @@
 					<code>display: flex;</code>
 				</div>
 				<div class="demo-expo">
-					<div class="flexbox">
+					<div class="flexbox1">
 						<div>
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos id fuga, saepe aspernatur eaque maiores reprehenderit quis nisi enim sit asperiores dolorum! Ex consectetur neque non sed possimus. Officia, ducimus.
 					</div>
@@ -40,7 +40,7 @@
 					<code>display: inline-flex;</code>
 				</div>
 				<div class="demo-expo">
-					<div class="flexbox">
+					<div class="flexbox1">
 						<div>
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos id fuga, saepe aspernatur eaque maiores reprehenderit quis nisi enim sit asperiores dolorum! Ex consectetur neque non sed possimus. Officia, ducimus.
 					</div>
@@ -110,7 +110,7 @@
 					<code>visibility: collapse;</code>
 				</div>
 				<div class="demo-expo">
-					<div class="flexbox">
+					<div class="flexbox1">
 						<div>
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae maiores laboriosam minus sunt debitis, repellat expedita ullam, officia numquam, inventore asperiores, eligendi fugit qui a temporibus magni commodi cumque odit!
 						</div>
@@ -181,7 +181,7 @@
 					<code>flex-direction: row;</code>
 				</div>
 				<div class="demo-expo">
-					<div class="flexbox">
+					<div class="flexbox1">
 						<div>каждый</div>
 						<div>охотник</div>
 						<div>желает</div>
@@ -199,7 +199,7 @@
 					<code>flex-direction: row-reverse;</code>
 				</div>
 				<div class="demo-expo">
-					<div class="flexbox">
+					<div class="flexbox1">
 						<div>каждый</div>
 						<div>охотник</div>
 						<div>желает</div>
@@ -217,7 +217,7 @@
 					<code>flex-direction: column;</code>
 				</div>
 				<div class="demo-expo">
-					<div class="flexbox">
+					<div class="flexbox1">
 						<div>каждый</div>
 						<div>охотник</div>
 						<div>желает</div>
@@ -234,7 +234,7 @@
 					<code>flex-direction: column-reverse;</code>
 				</div>
 				<div class="demo-expo">
-					<div class="flexbox">
+					<div class="flexbox1">
 						<div>каждый</div>
 						<div>охотник</div>
 						<div>желает</div>
@@ -285,7 +285,7 @@
 					<code>flex-wrap: nowrap;</code>
 				</div>
 				<div class="demo-expo">
-					<div class="flexbox">
+					<div class="flexbox1">
 						<div>есть</div>
 						<div>еще</div>
 						<div>славный</div>
@@ -300,7 +300,7 @@
 					<code>flex-wrap: wrap;</code>
 				</div>
 				<div class="demo-expo">
-					<div class="flexbox">
+					<div class="flexbox1">
 						<div>есть</div>
 						<div>еще</div>
 						<div>славный</div>
@@ -315,7 +315,7 @@
 					<code>flex-wrap: wrap-reverse;</code>
 				</div>
 				<div class="demo-expo">
-					<div class="flexbox">
+					<div class="flexbox1">
 						<div>есть</div>
 						<div>еще</div>
 						<div>славный</div>
@@ -358,6 +358,121 @@
 					<td>дискретная</td>
 				</tr>
 			</table>
+
+			<div class="demo demo12">
+				<div class="demo-title">
+					<code>flex-flow: row; max-width: 10em;
+	max-height: 7em;</code>
+				</div>
+				<div class="demo-expo">
+					<div class="flexbox2">
+						<div>1</div>
+						<div>2</div>
+						<div>3</div>
+						<div>4</div>
+						<div>5</div>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="demo demo13">
+				<div class="demo-title">
+					<code>flex-flow: column wrap; max-width: 10em;
+	max-height: 7em;</code>
+				</div>
+				<div class="demo-expo">
+					<div class="flexbox2">
+						<div>1</div>
+						<div>2</div>
+						<div>3</div>
+						<div>4</div>
+						<div>5</div>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="demo demo14">
+				<div class="demo-title">
+					<code>flex-flow: column wrap; max-width: 10em;
+	max-height: 7em;</code>
+				</div>
+				<div class="demo-expo">
+					<div class="flexbox2">
+						<div>1</div>
+						<div>2</div>
+						<div>3</div>
+						<div>4</div>
+						<div>5</div>
+
+					</div>
+				</div>
+			</div>
+		</section>
+		<section>
+			<h3><code>order</code></h3>
+
+			<table class="css-prop-table">
+				<tr>
+					<td>Название</td>
+					<td><code>order</code></td>
+				</tr>
+				<tr>
+					<td>Значения</td>
+					<td><code>
+						целое число
+					</code></td>
+				</tr>
+				<tr>
+					<td>Начальное</td>
+					<td><code>
+					0
+					</code></td>
+				</tr>
+				<tr>
+					<td>Применяется</td>
+					<td>к flex-элементам и абсолютно позиционированным дочерним элементам flex-контейнеров</td>
+				</tr>
+				<tr>
+					<td>Наследуется</td>
+					<td>нет</td>
+				</tr>
+				<tr>
+					<td>Вычисленное значение</td>
+					<td>как в css</td>
+				</tr>
+				<tr>
+					<td>Анимация</td>
+					<td>дискретная</td>
+				</tr>
+			</table>
+			<p>Свойство <code>order</code> управляет порядком, в котором дочерние элементы flex-контейнера появляются в нем, назначая им порядковую группу.  </p>
+
+			<div class="demo demo15">
+				<div class="demo-title">
+					<code>разные order</code>
+				</div>
+				<div class="demo-expo">
+					<div class="flexbox2">
+						<div class="order3">1</div>
+						<div class="order4">2</div>
+						<div class="order1">3</div>
+						<div class="order2">4</div>
+						<div class="order1">5</div>
+					</div>
+				</div>
+			</div>
+			<p>
+				<code>order: -1</code> передвигает элемент в начало flex-контейнера, поскольку меньше дефолтного <code>0</code>
+			</p>
+			<ul>
+				<li><code>order</code> не влияет на порядок элементов в не-визуальных медиа, не влияет на порядок обхода узлов по умолчанию</li>
+				
+			</ul>
+		</section>
+		<section>
+			<h3>Flex-строки</h3>
 		</section>
 	</article>
 </body>

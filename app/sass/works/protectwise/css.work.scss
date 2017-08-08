@@ -1,1 +1,283 @@
-$f-main: 'Reem Kufi', sans-serif;
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+
+
+/* debug */
+$b-debug: 1px solid green;
+
+
+
+/* mixins */
+@mixin column_center{
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+}
+
+
+/* colors */
+$c-wht: #fff;
+$c-blue-p: #f6f9f9;
+$c-blue-d: #13315C;
+$c-gry-l: #d3d9da;
+$c-blue-m: #296Ca2;
+$c-gry: #829AB1;
+$c-blue: #0182c3;
+$c-blue-l: #ADC4Ce;
+
+/* fonts */
+
+$f-decor: 'Reem Kufi', sans-serif;
+$f-main: 'Raleway', sans-serif;
+
+/* */
+
+body{
+	font-family: $f-main;
+	color: $c-gry;
+}
+
+/* wrapper */
+.wrapper{
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 4rem 0;
+}
+
+/* */
+
+
+/* ====================== siteheader ============= */
+
+.siteheader{
+	background: $c-blue-p; /* magic */
+	background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("bg-media/bg3.jpg"),;
+	background-position: 50%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	 /* magic */
+
+	.wrapper{
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+		align-items: center;
+		min-height: 1100px;
+		text-align: center;
+		line-height: 1.5;
+		color: $c-wht;
+	}
+
+	h1{
+		font-size: 5em;
+		
+		span{
+			display: block;
+			text-transform: uppercase;
+			font-size: 0.5em;
+			padding-bottom: 1em;
+		}
+	}
+	p{
+		margin: 1rem;
+		font-size: 1.5em;
+		text-transform: capitalize;
+	}
+
+}
+
+/* ====================== defense ============= */
+.defense section{
+	display: flex;
+	flex-wrap: wrap;
+	padding: 2rem 0;
+
+	.pictured-item{
+		max-width: 49%;
+	}
+}
+
+/* ====================== security ============= */
+.security{
+	background-color: $c-blue-p;
+}
+
+.security section{
+	display: flex;
+	flex-wrap: wrap;
+	padding: 2rem 0;
+
+	.pictured-item{
+		max-width: 28%;
+	}
+}
+
+/* ====================== cloud ============= */
+.cloud{
+	background-image: linear-gradient($c-blue-d, $c-blue-m, $c-blue);
+}
+
+.cloud header{
+	color: $c-blue-p;
+	h2{
+		color: inherit;
+	}
+}
+
+/* ====================== spotlight ============= */
+
+/* ====================== news ============= */
+.news{
+	background-color: $c-blue-p;
+}
+
+/* ====================== forfree ============= */
+
+
+/* ====================== sitefooter ============= */
+
+/* components */
+.sitesection{
+	padding: 6rem 0;
+	header{
+		@include column_center;
+
+		p{
+		font-size: 1.44em;
+		padding: 1rem 3em;
+		line-height: 1.2;
+	}
+	}
+	h2 {
+		font-size: 3em;
+		text-transform: capitalize;
+		color: $c-blue-d;
+		span{
+			display: block;
+			text-transform: uppercase;
+			font-size: 0.5em;
+			padding-bottom: 1em;
+		}
+	} //h2
+	.cat{
+		font-size: 0.75rem;
+		letter-spacing: 0.2em;
+		padding: 1rem 0;
+		text-transform: uppercase;
+		font-weight: bold;
+
+	}
+	
+
+}
+
+/*  big components */
+
+.pictured-item{
+
+	display: flex;
+	align-items: flex-start;
+	padding: 2rem 0;
+	
+
+	&-pic{
+		width: 30%;
+		padding: 0 1em;
+		
+
+		.pic{
+			width: 4em;
+			height: 4em;
+
+			border-radius: 50%;
+			padding: 1em;
+			border: 1px solid $c-blue-l;
+			background: url("bg-media/bug.svg");
+			background-size: 2em 2em;
+			background-repeat: no-repeat;
+			background-position: 50%;
+		}
+	}
+
+	&-text{
+		h3{
+			color: $c-blue-d;
+			padding-bottom: 1rem;
+			font-weight: bold;
+		}
+		p{
+			line-height: 1.5;
+		}
+	}
+} // pictured-item
+
+
+.tm{
+	display: inline-flex;
+}
+
+button{
+	padding: 0.8em 2em;
+	margin: 1em 0;
+	text-transform: uppercase;
+	color: $c-blue-p;
+	background: $c-blue;
+	border: none;
+	font-family: $f-main;
+	font-weight: bold;
+	transition: all 0.3s;
+
+	&:hover{
+		background-color: $c-blue-m;
+	}
+}
+
+
+
+/* helpers and debugger */
+
+.style-guide{
+	$b: 1px solid rgba(0,0,0,0.15);
+
+	margin: 1em;
+	border: $b; 
+	padding: 1em;
+	position: fixed;
+	bottom: 1em;
+	right: 1em;
+	box-shadow: 0.1em 0.1em 0.1em rgba(0,0,0,0.1);
+
+	background: #fff;
+
+	.color-box{
+		margin: 0.5em 0;
+		border: $b;
+		padding: 0.65em 1em;
+		color: #fff;
+		text-shadow: 1px 1px rgba(0,0,0,0.2);
+
+		&:nth-child(1){
+			background: $c-blue-p;
+		}
+		&:nth-child(2){
+			background: $c-blue-d;
+		}
+		&:nth-child(3){
+			background: $c-gry-l;
+		}
+		&:nth-child(4){
+			background: $c-blue-m;
+		}
+		&:nth-child(5){
+			background: $c-gry;
+		}
+		&:nth-child(6){
+			background: $c-blue;
+		}
+		&:nth-child(7){
+			background: $c-blue-l;
+		}
+	}
+}

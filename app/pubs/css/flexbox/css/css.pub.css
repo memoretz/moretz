@@ -3,19 +3,19 @@
 .demo1{
 	
 }
-.demo1 .demo-expo .flexbox{
+.demo1 .demo-expo .flexbox1{
 	display: flex;
 	padding: 1em;
 }
 
-.demo2 .demo-expo .flexbox{
+.demo2 .demo-expo .flexbox1{
 	display: inline-flex;
 	padding: 1em;
 }
 
 /* collapse */
 
-.demo3 .demo-expo .flexbox{
+.demo3 .demo-expo .flexbox1{
 	display: flex;
 	padding: 1em;
 
@@ -28,47 +28,104 @@
 /* flex-direction */
 
 
- .flexbox div{
+ .flexbox1 div{
 	padding: 2em;
 	border: 1px solid rgba(0,0,0,0.1);
 	background-color: rgba(0,0,0,0.05);
 }
 
-.demo5 .flexbox{
+.demo5 .flexbox1{
 	display: flex;
 	flex-direction: row;
 }
 
-.demo6 .flexbox{
+.demo6 .flexbox1{
 	display: flex;
 	flex-direction: column;
 }
 
-.demo7 .flexbox{
+.demo7 .flexbox1{
 	display: flex;
 	flex-direction: row-reverse;
 }
 
-.demo8 .flexbox{
+.demo8 .flexbox1{
 	display: flex;
 	flex-direction: column-reverse;
 }
 
 /* flex-wrap */
-.demo9 .flexbox{
+.demo9 .flexbox1{
 	width: 60%;
 	display: flex;
 	flex-wrap: wrap;
 }
 
-.demo10 .flexbox{
+.demo10 .flexbox1{
 	width: 60%;
 	display: flex;
 	flex-wrap: wrap-reverse;
 }
 
-.demo11 .flexbox{
+.demo11 .flexbox1{
 	width: 60%;
 	display: flex;
 	flex-wrap: nowrap;
+}
+
+/* flex-flow */
+
+.flexbox2{
+	max-width: 10em;
+	max-height: 7em;
+	border-radius: 0.5em;
+	background-color: #296ca2;
+	margin: 1em;
+	display: flex;
+}
+
+.flexbox2 div{
+	background: #0182c3;
+	padding: 0.65em 1em;
+	color: #fff;
+	font-weight: bold;
+
+	margin: 2px;
+	max-width: 4em;
+}
+
+.demo12 .flexbox2{
+	flex-flow: row;
+}
+
+.demo13 .flexbox2{
+	flex-flow: column wrap;
+}
+
+.demo14 .flexbox2{
+	flex-flow: row-reverse wrap-reverse;
+}
+
+/* order */
+
+.demo15 .flexbox2{
+	flex-flow: row wrap;
+}
+
+.demo15 .order1{
+	order: 1;
+}
+.demo15 .order2{
+	order: 2;
+	background: pink;
+}
+
+.demo15 .order3{
+	order: 3;
+	background: deepPink;
+}
+
+.demo15 .order4{
+	order: 4;
+	background: salmon;
 }

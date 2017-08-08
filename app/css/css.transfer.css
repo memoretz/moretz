@@ -50,11 +50,17 @@ ol {
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   line-height: 1.8; }
 
+.demo-expo {
+  padding: 0.5em; }
+
 table {
   margin: 1em 0;
   line-height: 1.8; }
 
 td {
   padding: 0 1em; }
+
+.js-api-table td:first-child {
+  font-family: "Fira Mono", monospace; }
 
 /*# sourceMappingURL=css.transfer.css.map */
