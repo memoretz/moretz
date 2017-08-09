@@ -11,10 +11,20 @@
 	<link href="https://fonts.googleapis.com/css?family=Reem+Kufi" rel="stylesheet">
 
 	<!-- https://dribbble.com/shots/2029927-Protectwise-Home -->
+	<script src="https://use.fontawesome.com/1f01389b49.js"></script>
 </head>
 <body>
 	<nav class="sitenav">
-		
+		<div class="wrapper">
+			<div class="logo">protectwise</div>
+			<ul>
+				<li><a href="#platform">platform</a></li>
+				<li><a href="#company">company</a></li>
+				<li><a href="#news">news</a></li>
+				<li><a href="#login">login</a></li>
+				<li><a href="#menu">menu <i class="fa fa-bars" aria-hidden="true"></i></a></li>
+			</ul>
+		</div>
 	</nav>
 	<header class="siteheader">
 		<div class="wrapper">
@@ -88,7 +98,7 @@
 	</article><!-- defense -->
 	<article class="security">
 		<div class="wrapper sitesection">
-			<header>
+			<header id="company">
 				<div class="pic"><span class="tri"></span></div>
 				<div class="cat">a better path</div>
 				<h2>security <i class="tm">enlightened<span>tm</span></i></h2>
@@ -162,14 +172,66 @@
 
 	<article class="cloud">
 		<div class="wrapper sitesection">
-			<header>
+			<header id="platform">
 				<div class="pic"><span class="tri"></span></div>
 				<div class="cat">platform</div>
 				<h2>cloud network DVR</h2>
 				<p>The ProtectWise Cloud Network DVR is a virtual camera in the cloud that records all network traffic so that buisiness can see everythong, including events in past, identify what matters most, and respond more quickly and effectively to threats.</p>
 				<button>learn more about our platform</button>
 			</header>
-			<section></section>
+			<section>
+				<!-- ======================= pictured-item ============== -->
+				<div class="pictured-item">
+					
+					<div class="pictured-item-text">
+						<h3>Visibility</h3>
+						<div class="pictured-item-lead">
+							See everything
+						</div>
+						<ul>
+							<li>Netflow, metadata, trancated flows and full-fidelity PCAP by product and application</li>
+							<li>Long-term retention allows for analysis of security events and observations now and in the past days, weeks, months and even years.</li>
+							
+						</ul>
+					</div>
+				</div><!-- pictured-item -->
+
+				<!-- ======================= / pictured-item ============== -->
+				<!-- ======================= pictured-item ============== -->
+				<div class="pictured-item">
+					
+					<div class="pictured-item-text">
+						<h3>Detection</h3>
+						<div class="pictured-item-lead">
+							identify what matters most
+						</div>
+						<ul>
+							<li>Continuous, automated threat detection and analysis in real-time and retrospectively - finding threats that were previously unknown</li>
+							<li>Correlated, community-scaled threat intelligence and analysis that delivers a highly distiled, prioritized threat signal and eliminates alarm fatigue.</li>
+							
+						</ul>
+					</div>
+				</div><!-- pictured-item -->
+
+				<!-- ======================= / pictured-item ============== -->
+
+				<!-- ======================= pictured-item ============== -->
+				<div class="pictured-item">
+					
+					<div class="pictured-item-text">
+						<h3>Response</h3>
+						<div class="pictured-item-lead">
+							react faster and more Effectively
+						</div>
+						<ul>
+							<li>Quickly identify and respond to priority events, manage alarm events, review situational report and investigate network activity and threat observations</li>
+							<li>Rapidly access full PCAP to conduct deep-dive, comprehensive forensic investigations and reduce the dwell time between security events and effective response</li>
+						</ul>
+					</div>
+				</div><!-- pictured-item -->
+
+				<!-- ======================= / pictured-item ============== -->
+			</section>
 		</div>
 	</article><!-- cloud -->
 
@@ -230,17 +292,15 @@
 
 	<article class="news">
 		<div class="wrapper sitesection">
-			<header>
+			<header id="news">
 				<div class="pic"><span class="tri"></span></div>
 				<div class="cat">hot of the presses</div>
 				<h2>latest news</h2>
-			
-				
 			</header>
 			<section>
 				<article class="news-item">
 					<div class="news-item-meta">
-						<span class="news-cat"></span>
+						<span class="news-cat blog">blog</span>
 						<span class="news-date">2 August 2017</span>
 					</div>
 					<div class="news-item-pic">
@@ -248,20 +308,41 @@
 					</div>
 					<header class="news-item-header">
 						<h3>
-							ProtectWise exists stealth, unveils Cloud Network DVr
+							ProtectWise exists stealth, unveils Cloud Network DVR
 						</h3>
 					</header>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit animi sequi quae laboriosam, voluptas sed perferendis! Perspiciatis deleniti laboriosam accusamus. Dolorum consectetur soluta non unde in eveniet. Fugiat, nesciunt, delectus!
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit animi sequi quae laboriosam, voluptas sed perferendis! 
 					</p>
 					<div class="new-item-controls">
-						read more
+						<a href="#">read more</a>
+					</div>
+				</article>
+
+				<article class="news-item press">
+					<div class="news-item-meta">
+						<span class="news-cat press">press release</span>
+						<span class="news-date">2 August 2017</span>
+					</div>
+					<div class="news-item-pic">
+						
+					</div>
+					<header class="news-item-header">
+						<h3>
+							The Power of the Cloud Shift
+						</h3>
+					</header>
+					<p>
+						Perspiciatis deleniti laboriosam accusamus. Dolorum consectetur soluta non unde in eveniet. Fugiat, nesciunt, delectus!
+					</p>
+					<div class="new-item-controls">
+						<a href="#">read more</a>
 					</div>
 				</article>
 
 				<article class="news-item">
 					<div class="news-item-meta">
-						<span class="news-cat"></span>
+						<span class="news-cat innews ">in the news</span>
 						<span class="news-date">2 August 2017</span>
 					</div>
 					<div class="news-item-pic">
@@ -269,42 +350,19 @@
 					</div>
 					<header class="news-item-header">
 						<h3>
-							ProtectWise exists stealth, unveils Cloud Network DVr
+							10 Security Start-Ups to Watch
 						</h3>
 					</header>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit animi sequi quae laboriosam, voluptas sed perferendis! Perspiciatis deleniti laboriosam accusamus. Dolorum consectetur soluta non unde in eveniet. Fugiat, nesciunt, delectus!
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit animi sequi quae laboriosam, voluptas sed perferendis! 
 					</p>
 					<div class="new-item-controls">
-						read more
+						<a href="#">read more</a>
 					</div>
 				</article>
-
-
-
-<article class="news-item">
-					<div class="news-item-meta">
-						<span class="news-cat"></span>
-						<span class="news-date">2 August 2017</span>
-					</div>
-					<div class="news-item-pic">
-						
-					</div>
-					<header class="news-item-header">
-						<h3>
-							ProtectWise exists stealth, unveils Cloud Network DVr
-						</h3>
-					</header>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit animi sequi quae laboriosam, voluptas sed perferendis! Perspiciatis deleniti laboriosam accusamus. Dolorum consectetur soluta non unde in eveniet. Fugiat, nesciunt, delectus!
-					</p>
-					<div class="new-item-controls">
-						read more
-					</div>
-				</article>
-
-
-
+			</section>
+			<section>
+				<button class="invert-button">see all news</button>
 			</section>
 		</div>
 	</article><!-- news -->
@@ -322,7 +380,18 @@
 
 
 	<footer class="sitefooter sitesection">
-		
+		<div class="wrapper">
+			<ul>
+				<li>&copy; Copyright 2017 ProtectWise Inc All Rights reserved</li>
+				<li>
+					<ul>
+						<li><a href="#">Privacy policy</a></li>
+						<li><a href="#">Your California Privacy Rights</a></li>
+						<li><a href="#">Terms of Service</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
 	</footer>
 
 	<div class="style-guide">
@@ -337,6 +406,36 @@
 		<div class="color-box">
 			$c-blue-l: #ADC4Ce;
 		</div>
+		<div class="close">
+			<span>x</span>
+		</div>
 	</div>
 </body>
+<script type="text/javascript">
+	(function(){
+
+		var styleGuideClose = document.querySelector('.style-guide .close');
+		styleGuideClose.addEventListener('click', function(ev){
+			ev.target.parentNode.parentNode.style.display = 'none';
+		}, false);
+
+		
+
+
+		// var menuItems = Array.prototype.slice.call(document.querySelectorAll('.sitenav ul li a'));
+		
+
+		// menuItems.forEach(
+		// 	function(elem){
+		// 		elem.addEventListener("click", function(ev){
+		// 			ev.preventDefault();
+		// 			var menuid = ev.currentTarget.textContent;
+		// 			var elem = document.getElementById(menuid);
+		// 			console.log(elem);
+		// 			elem.scrollIntoView();
+		// 		}, false);
+		// 	}
+		// ); //forEach
+	})();
+</script>
 </html>
