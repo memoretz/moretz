@@ -17,6 +17,13 @@ ul {
 ol {
   list-style-type: decimal; }
 
+main {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+
 .mod-pub {
   max-width: 1000px;
   margin: 2em;
@@ -41,14 +48,36 @@ ol {
     padding: 1em 0;
     line-height: 1.8; }
 
+.mod-sidebar {
+  padding: 2em 1em;
+  max-width: 300px;
+  background-color: transparent;
+  font-size: 0.875em; }
+  .mod-sidebar h3 {
+    font-size: 1rem;
+    padding: 2em 0; }
+  .mod-sidebar ul {
+    line-height: 1.5;
+    color: #444;
+    padding: 0;
+    list-style-type: none; }
+    .mod-sidebar ul a {
+      color: inherit; }
+  .mod-sidebar li {
+    padding: 0.5em; }
+
 .demo {
   margin: 1em 0;
   border: 1px solid rgba(0, 0, 0, 0.15); }
 
-.demo-title {
+.demo-title, .demo-controls {
   padding: 1em;
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   line-height: 1.8; }
+
+.demo-controls {
+  display: flex;
+  flex-wrap: wrap; }
 
 .demo-expo {
   padding: 0.5em; }
@@ -56,6 +85,9 @@ ol {
 table {
   margin: 1em 0;
   line-height: 1.8; }
+
+caption {
+  font-weight: bold; }
 
 td {
   padding: 0 1em; }

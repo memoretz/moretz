@@ -9,7 +9,13 @@
 	<link rel="stylesheet" type="text/css" href="css/css.pub.css">
 </head>
 <body>
-	<article class="mod-pub">
+	<main>
+		<div class="mod-sidebar">
+		<h3>Содержание</h3>
+			<ul></ul>
+		</div>
+
+		<article class="mod-pub">
 		<header>
 			<h2>Flexbox</h2>
 			<p><a href="https://www.w3.org/TR/2016/CR-css-flexbox-1-20160526/">W3C Спецификация</a></p>
@@ -178,7 +184,23 @@
 			</p>
 			<div class="demo demo5">
 				<div class="demo-title">
-					<code>flex-direction: row;</code>
+					<code>flex-direction</code>
+				</div>
+				<div class="demo-controls">
+					<fieldset>
+						<div>
+							<label for><input type="radio" name="flex-direction" value="row"> row</label>
+						</div>
+						<div>
+							<label for><input type="radio" name="flex-direction" value="row-reverse"> row-reverse</label>
+						</div>
+						<div>
+							<label for><input type="radio" name="flex-direction" value="column"> column</label>
+						</div>
+						<div>
+							<label for><input type="radio" name="flex-direction" value="column-reverse"> column-reverse</label>
+						</div>
+					</fieldset>
 				</div>
 				<div class="demo-expo">
 					<div class="flexbox1">
@@ -194,58 +216,6 @@
 				</div>
 			</div>
 
-			<div class="demo demo7">
-				<div class="demo-title">
-					<code>flex-direction: row-reverse;</code>
-				</div>
-				<div class="demo-expo">
-					<div class="flexbox1">
-						<div>каждый</div>
-						<div>охотник</div>
-						<div>желает</div>
-						<div>знать</div>
-						<div>где</div>
-						<div>сидит</div>
-						<div>марв</div>
-						<div><img src="media/marv.jpg" alt="Marv"></div>
-					</div>
-				</div>
-			</div>
-
-			<div class="demo demo6">
-				<div class="demo-title">
-					<code>flex-direction: column;</code>
-				</div>
-				<div class="demo-expo">
-					<div class="flexbox1">
-						<div>каждый</div>
-						<div>охотник</div>
-						<div>желает</div>
-						<div>знать</div>
-						<div>где</div>
-						<div>сидит</div>
-						<div>марв</div>
-						<div><img src="media/marv.jpg" alt="Marv"></div>
-					</div>
-				</div>
-			</div>
-			<div class="demo demo8">
-				<div class="demo-title">
-					<code>flex-direction: column-reverse;</code>
-				</div>
-				<div class="demo-expo">
-					<div class="flexbox1">
-						<div>каждый</div>
-						<div>охотник</div>
-						<div>желает</div>
-						<div>знать</div>
-						<div>где</div>
-						<div>сидит</div>
-						<div>марв</div>
-						<div><img src="media/marv.jpg" alt="Marv"></div>
-					</div>
-				</div>
-			</div>
 		</section>
 		<section>
 			<h3><code>flex-wrap</code></h3>
@@ -282,7 +252,21 @@
 			<p>	В примерах всем flex-контейнерам выставлена ширина <code>width: 60%;</code></p>
 			<div class="demo demo11">
 				<div class="demo-title">
-					<code>flex-wrap: nowrap;</code>
+					<code>flex-wrap</code>
+				</div>
+				<div class="demo-controls">
+					<fieldset>
+						<div>
+							<label for><input type="radio" name="flex-wrap" value="nowrap"> nowrap</label>
+						</div>
+						<div>
+							<label for><input type="radio" name="flex-wrap" value="wrap"> row-reverse</label>
+						</div>
+						<div>
+							<label for><input type="radio" name="flex-wrap" value="wrap-reverse"> wrap-reverse</label>
+						</div>
+						
+					</fieldset>
 				</div>
 				<div class="demo-expo">
 					<div class="flexbox1">
@@ -295,36 +279,8 @@
 					</div>
 				</div>
 			</div>
-			<div class="demo demo9">
-				<div class="demo-title">
-					<code>flex-wrap: wrap;</code>
-				</div>
-				<div class="demo-expo">
-					<div class="flexbox1">
-						<div>есть</div>
-						<div>еще</div>
-						<div>славный</div>
-						<div>Дуайт</div>
-						<div><img src="media/duayet.png" alt="duayet"></div>
-						<div>в запасе</div>
-					</div>
-				</div>
-			</div>
-			<div class="demo demo10">
-				<div class="demo-title">
-					<code>flex-wrap: wrap-reverse;</code>
-				</div>
-				<div class="demo-expo">
-					<div class="flexbox1">
-						<div>есть</div>
-						<div>еще</div>
-						<div>славный</div>
-						<div>Дуайт</div>
-						<div><img src="media/duayet.png" alt="duayet"></div>
-						<div>в запасе</div>
-					</div>
-				</div>
-			</div>
+			
+			
 		</section>
 		<section>
 			<h3><code>flex-flow</code></h3>
@@ -473,7 +429,286 @@
 		</section>
 		<section>
 			<h3>Flex-строки</h3>
+			<p>
+				flex-элементы во flex-контейнере располагаются и выравниваются по flex-строкам, гипотетическим контейнерам, используемым для группировки и выравнивания алгоримом раскладки. Flex-контейнер может быть либо однострочным, либо многострочным в зависимости от значения <code>flex-wrap</code>.
+				<ul>
+					<li>Однострочный контейнер <code>flex: nowrap;</code> располагает все свои дочерние элементы в одной строке даже, если содержимое переполняет контейнер</li>
+					<li>Многострочный flex-контейнер разбивает содержимое на множество строк. Каждая строка содержит по крайней мере один flex-элемент, если сам flex-контейнер не пустой.</li>
+				</ul>
+			</p>
+			<div class="demo demo16">
+				<div class="demo-title">
+					<code>flex lines</code>
+				</div>
+				<div class="demo-expo">
+					<div class="flexbox3">
+						<div>1</div>
+						<div>2</div>
+						<div>3</div>
+						<div>4</div>
+					</div>
+				</div>
+			</div>
+			<p>
+				В многострочном flex-контейнере (даже если по факту в нем всего одна строка), поперечный размер каждой строки - минимальнго размера, необходимого, чтобы вместить flex-элементы этой строки (после выравнивания с помощью <code>align-self</code>), а строки выравниваются внутри flex-контейнера с помощью <code>align-content</code>
+			</p>
+			<div class="demo demo17">
+				<div class="demo-title">
+					<code>flex: auto; - для элементов</code>
+				</div>
+				<div class="demo-expo">
+					<div class="flexbox3">
+						<div>1</div>
+						<div>2</div>
+						<div>3</div>
+						<div>4</div>
+					</div>
+				</div>
+			</div>
 		</section>
+		<section>
+			<h3><code>flex</code></h3>
+			<table class="css-prop-table">
+				<tr>
+					<td>Название</td>
+					<td><code>flex</code></td>
+				</tr>
+				<tr>
+					<td>Значения</td>
+					<td><code>
+						none | [ <‘flex-grow’> <‘flex-shrink’>? || <‘flex-basis’> ]
+					</code></td>
+				</tr>
+				<tr>
+					<td>Начальное</td>
+					<td><code>
+					1 0 auto
+					</code></td>
+				</tr>
+				<tr>
+					<td>Применяется</td>
+					<td>к flex-элементам</td>
+				</tr>
+				<tr>
+					<td>Наследуется</td>
+					<td>нет</td>
+				</tr>
+				<tr>
+					<td>Вычисленное значение</td>
+					<td>см индивидуальные свойства</td>
+				</tr>
+				<tr>
+					<td>Анимация</td>
+					<td>см индивидуальные свойства</td>
+				</tr>
+			</table>
+			<table class="css-vals-table">
+				<tr>
+					<td>flex-grow</td>
+					<td><code>Число</code> устанавливает свойство <code>flex-grow</code> и определяет <code>flex grow factor</code>, который задает, как сильно вырастет flex-элемент по отношению к другим fkex-элементам в контейнере, когда распределяется положительное пустое пространство</td>
+				</tr>
+				<tr>
+					<td>flex-shrink</td>
+					<td><code>Число</code> устанавливает свойство <code>flex-shrink</code> и определяет <code>flex shrink factor</code>, который задает, как сильно вырастет flex-элемент по отношению к другим fkex-элементам в контейнере, когда распределяется отрицательное (негативное) пустое пространство</td>
+				</tr>
+				
+			</table>
+			<table>
+				<caption>Значения flex</caption>
+				<tr>
+					<td><code>flex: initial;</code></td>
+					<td>эквивалентно <code>flex: 0 1 auto;</code>. Размер элемента определяется <code>width/height</code> (если свойство размера по главной оси вычисляется в <code>auto</code>, то размер элемента - размер его контента</td>
+				</tr>
+				<tr>
+					<td><code>flex: auto;</code></td>
+					<td>эквивалентно <code>flex: 1 1 auto;</code>. Размер элемента определяется <code>width/height</code>, но элементы полностью флексибильны, то есть, занимают все свободное пространство по главной оси. Если элементы имеют <code>flex: auto;, flex-initial;, flex: none;</code>, то все положительное свободное пространство после элементов распределяется между элементами, у которых <code>flex: auto;</code></td>
+				</tr>
+				<tr>
+					<td><code>flex: none;</code></td>
+					<td>
+						эквивалентно <code>flex: 0 0 auto;</code>. Размер элемента определяется <code>width/height</code>, но элементы полностью не-флексибильны. Похоже на <code>initial</code> с той разницей, что flex-элементы не могут сжиматься, даже в ситуациях переполнения
+					</td>
+				</tr>
+				<tr>
+					<td><code>flex: положительное число;</code></td>
+					<td>эквивалентно <code>flex: положительное число 1 0;</code>. flex-элементы флексибильны, flex basis - 0, в результате чего элемент получает заданную часть свободного пространства во flex-контейнере.</td>
+				</tr>
+			</table>
+			<div class="demo demo18">
+				<div class="demo-title">
+					<code>flex: initial;</code>
+				</div>
+				<div class="demo-controls">
+					<fieldset>
+						<div>
+							<label><input type="radio" name="flex-state" value="initial"> initial</label>
+						</div>
+						<div>
+							<label><input type="radio" name="flex-state" value="auto"> auto</label>
+						</div>
+						<div>
+							<label><input type="radio" name="flex-state" value="none"> none</label>
+						</div>
+					</fieldset>
+				</div>
+				<div class="demo-expo">
+					<div class="flexbox3">
+						<div>1</div>
+						<div>2</div>
+						<div>3</div>
+						<div>4</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section>
+			<h3><code>flex-grow</code></h3>
+			<table class="css-prop-table">
+				<tr>
+					<td>Название</td>
+					<td><code>flex-grow</code></td>
+				</tr>
+				<tr>
+					<td>Значения</td>
+					<td><code>
+						число
+					</code></td>
+				</tr>
+				<tr>
+					<td>Начальное</td>
+					<td><code>
+					0
+					</code></td>
+				</tr>
+				<tr>
+					<td>Применяется</td>
+					<td>к flex-элементам</td>
+				</tr>
+				<tr>
+					<td>Наследуется</td>
+					<td>нет</td>
+				</tr>
+				<tr>
+					<td>Вычисленное значение</td>
+					<td>как в css</td>
+				</tr>
+				<tr>
+					<td>Анимация</td>
+					<td>число</td>
+				</tr>
+			</table>
+			<div class="demo demo19">
+				<div class="demo-title">
+					<code>flex-grow</code>
+				</div>
+				<div class="demo-expo">
+					<div class="flexbox4">
+						<div>1</div>
+						<div>2</div>
+						<div>3</div>
+						<div>4</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section>
+			<h3><code>flex-shrinks</code></h3>
+			<table class="css-prop-table">
+				<tr>
+					<td>Название</td>
+					<td><code>flex-shrink</code></td>
+				</tr>
+				<tr>
+					<td>Значения</td>
+					<td><code>
+						число
+					</code></td>
+				</tr>
+				<tr>
+					<td>Начальное</td>
+					<td><code>
+					1
+					</code></td>
+				</tr>
+				<tr>
+					<td>Применяется</td>
+					<td>к flex-элементам</td>
+				</tr>
+				<tr>
+					<td>Наследуется</td>
+					<td>нет</td>
+				</tr>
+				<tr>
+					<td>Вычисленное значение</td>
+					<td>как в css</td>
+				</tr>
+				<tr>
+					<td>Анимация</td>
+					<td>число</td>
+				</tr>
+			</table>
+			<div class="demo demo20">
+				<div class="demo-title">
+					<code>flex-shrink</code>
+				</div>
+				<div class="demo-expo">
+					<div class="flexbox4">
+						<div>1</div>
+						<div>2</div>
+						<div>3</div>
+						<div>4</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section>
+			<h3><code>flex-basis</code></h3>
+			<table class="css-prop-table">
+				<tr>
+					<td>Название</td>
+					<td><code>flex-basis</code></td>
+				</tr>
+				<tr>
+					<td>Значения</td>
+					<td><code>
+						content | width
+					</code></td>
+				</tr>
+				<tr>
+					<td>Начальное</td>
+					<td><code>
+					auto
+					</code></td>
+				</tr>
+				<tr>
+					<td>Применяется</td>
+					<td>к flex-элементам</td>
+				</tr>
+				<tr>
+					<td>Наследуется</td>
+					<td>нет</td>
+				</tr>
+				<tr>
+					<td>Процентное значение</td>
+					<td>от внутреннего размера главного направления flex-контейнера</td>
+				</tr>
+				<tr>
+					<td>Вычисленное значение</td>
+					<td>как в css, длина - в абсолютное значение</td>
+				</tr>
+				<tr>
+					<td>Анимация</td>
+					<td>дискретная для ключевых словах, для остального - как длина, процентное значение или значение <code>calc</code></td>
+				</tr>
+			</table>
+		</section>
+		<section>
+			<h3>Выравнивание с помощью полей <code>auto</code></h3>
+		</section>
+		
 	</article>
+	</main>
+	<script type="text/javascript" src="js/js.flex-demo.js"></script>
+	<script type="text/javascript" src="js/js.make-content.js"></script>
 </body>
 </html>

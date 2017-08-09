@@ -24,3 +24,12 @@ ul{
 ol{
 	list-style-type: decimal;
 }
+
+main{
+	position: relative;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	
+}

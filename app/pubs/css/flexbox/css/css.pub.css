@@ -39,33 +39,9 @@
 	flex-direction: row;
 }
 
-.demo6 .flexbox1{
-	display: flex;
-	flex-direction: column;
-}
-
-.demo7 .flexbox1{
-	display: flex;
-	flex-direction: row-reverse;
-}
-
-.demo8 .flexbox1{
-	display: flex;
-	flex-direction: column-reverse;
-}
 
 /* flex-wrap */
-.demo9 .flexbox1{
-	width: 60%;
-	display: flex;
-	flex-wrap: wrap;
-}
 
-.demo10 .flexbox1{
-	width: 60%;
-	display: flex;
-	flex-wrap: wrap-reverse;
-}
 
 .demo11 .flexbox1{
 	width: 60%;
@@ -93,6 +69,7 @@
 	margin: 2px;
 	max-width: 4em;
 }
+
 
 .demo12 .flexbox2{
 	flex-flow: row;
@@ -129,3 +106,84 @@
 	order: 4;
 	background: salmon;
 }
+
+/* flex-lines */
+
+.flexbox3{
+	
+	border-radius: 0.5em;
+	background-color: #296ca2;
+	margin: 1em;
+	display: flex;
+}
+
+.flexbox3 div{
+	background: skyblue;
+	padding: 0.65em 1em;
+	color: #555;
+	font-weight: bold;
+	text-align: center;
+	margin: 2px;
+	
+}
+
+.demo16 .flexbox3{
+	width: 300px;
+	flex-wrap: wrap;
+}
+.demo16 .flexbox3 div{
+	width: 80px;
+}
+
+.demo17 .flexbox3{
+	width: 300px;
+	flex-wrap: wrap;
+}
+.demo17 .flexbox3 div{
+	width: 80px;
+	flex: auto;
+}
+
+.demo18 .flexbox3{
+	width: 300px;
+	flex-wrap: wrap;
+}
+.demo18 .flexbox3 div{
+	width: 80px;
+	flex: initial;
+}
+
+/* flex grow */
+
+.flexbox4{
+	width: 300px;
+	display: flex;
+	flex-flow: row wrap;
+	background-color: pink;
+}
+
+.flexbox4 div{
+	margin: 0.4em 0.2em;
+	padding: 1em;
+	background-color: magenta;
+	color: #fff;
+	width: 4em;
+	text-align: center;
+}
+
+.demo19 .flexbox4 div:nth-child(1){
+	flex-grow: 2;
+}
+
+.demo19 .flexbox4 div:nth-child(3){
+	flex-grow: 1;
+}
+
+
+
+.demo20 .flexbox4 div:nth-child(3){
+	flex-shrink: 1;
+}
+
+
+
