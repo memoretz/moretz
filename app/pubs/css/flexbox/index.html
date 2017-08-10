@@ -703,8 +703,194 @@
 			</table>
 		</section>
 		<section>
-			<h3>Выравнивание с помощью полей <code>auto</code></h3>
+			<h3>justify-content</h3>
+			<table class="css-prop-table">
+				<tr>
+					<td>Название</td>
+					<td><code>justify-content</code></td>
+				</tr>
+				<tr>
+					<td>Значения</td>
+					<td><code>
+							flex-start | flex-end | center | space-between | space-around
+					</code></td>
+				</tr>
+				<tr>
+					<td>Начальное</td>
+					<td><code>
+						flex-start
+					</code></td>
+				</tr>
+				<tr>
+					<td>Применяется</td>
+					<td>к flex-контейнеру</td>
+				</tr>
+				<tr>
+					<td>Наследуется</td>
+					<td>нет</td>
+				</tr>
+				<tr>
+					<td>Вычисленное значение</td>
+					<td>как в css</td>
+				</tr>
+				<tr>
+					<td>Анимация</td>
+					<td>дискретная</td>
+				</tr>
+			</table>
+			<p><code>justify-content</code> выравнивает flex-элементы по главной оси текущей строки flex-контейнера. Это происходит после того, как разрешатся флексибильные длины и авто поля.</p>
+			<div class="demo demo21">
+				<div class="demo-title">
+					<code>justify-content</code>
+				</div>
+				<div class="demo-controls">
+					<fieldset>
+						<div>
+							<label><input type="radio" name="justify-content" value="flex-start"> flex-start</label>
+						</div>
+						<div>
+							<label><input type="radio" name="justify-content" value="flex-end"> flex-end</label>
+						</div>
+						<div>
+							<label><input type="radio" name="justify-content" value="center "> center </label>
+						</div>
+						<div>
+							<label><input type="radio" name="justify-content" value="space-between"> space-between</label>
+						</div>
+
+						<div>
+							<label><input type="radio" name="justify-content" value="space-around"> space-around</label>
+						</div>
+					</fieldset>
+				</div>
+				<div class="demo-expo">
+					<div class="flexbox4">
+						<div>1</div>
+						<div>2</div>
+						<div>3</div>
+						<div>4</div>
+					</div>
+				</div>
+			</div>
 		</section>
+		<section>
+			<h3>align-items</h3>
+			<table class="css-prop-table">
+				<tr>
+					<td>Название</td>
+					<td><code>align-items</code></td>
+				</tr>
+				<tr>
+					<td>Значения</td>
+					<td><code>
+						flex-start | flex-end | center | baseline | stretch
+					</code></td>
+				</tr>
+				<tr>
+					<td>Начальное</td>
+					<td><code>
+					stretch
+					</code></td>
+				</tr>
+				<tr>
+					<td>Применяется</td>
+					<td>к flex-контейнеру</td>
+				</tr>
+				<tr>
+					<td>Наследуется</td>
+					<td>нет</td>
+				</tr>
+				<tr>
+					<td>Вычисленное значение</td>
+					<td>как в css</td>
+				</tr>
+				<tr>
+					<td>Анимация</td>
+					<td>дискретная</td>
+				</tr>
+			</table>
+		</section>
+		<section>
+			<h3>align-self</h3>
+			<table class="css-prop-table">
+				<tr>
+					<td>Название</td>
+					<td><code>align-self</code></td>
+				</tr>
+				<tr>
+					<td>Значения</td>
+					<td><code>
+						auto | flex-start | flex-end | center | baseline | stretch
+					</code></td>
+				</tr>
+				<tr>
+					<td>Начальное</td>
+					<td><code>
+					auto
+					</code></td>
+				</tr>
+				<tr>
+					<td>Применяется</td>
+					<td>к flex-элементам</td>
+				</tr>
+				<tr>
+					<td>Наследуется</td>
+					<td>нет</td>
+				</tr>
+				<tr>
+					<td>Вычисленное значение</td>
+					<td><code>auto</code> вычисляется в значение родительского контейнера <code>align-items</code>, все остальное как в css</td>
+				</tr>
+				<tr>
+					<td>Анимация</td>
+					<td>дискретная</td>
+				</tr>
+			</table>
+			<p>
+				Если у flex-элемента поля по поперечной оси имеют значение <code>auto</code>, то <code>align-self</code> перестает действовать. 
+			</p>
+			<p>
+				Для абсолютно позиционированных элементов значение <code>auto</code> вычисляется само в себя. Для всех остальных значение <code>auto</code> вычисляется в родительское <code>align-items</code> или в <code>stretch</code>, если у элемента нет родителя. 
+			</p>
+		</section>
+		<section>
+			<h3>align-content</h3>
+			<table class="css-prop-table">
+				<tr>
+					<td>Название</td>
+					<td><code>align-content</code></td>
+				</tr>
+				<tr>
+					<td>Значения</td>
+					<td><code>
+						flex-start | flex-end | center | space-between | space-around | stretch
+					</code></td>
+				</tr>
+				<tr>
+					<td>Начальное</td>
+					<td><code>
+						stretch
+					</code></td>
+				</tr>
+				<tr>
+					<td>Применяется</td>
+					<td>к многострочному flex-контейнеру</td>
+				</tr>
+				<tr>
+					<td>Наследуется</td>
+					<td>нет</td>
+				</tr>
+				<tr>
+					<td>Вычисленное значение</td>
+					<td>как в css</td>
+				</tr>
+				<tr>
+					<td>Анимация</td>
+					<td>дискретная</td>
+				</tr>
+			</table>
+		</section>
+		
 		
 	</article>
 	</main>

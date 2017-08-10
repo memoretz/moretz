@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Все свойства</title>
+
+	<link rel="stylesheet" type="text/css" href="../../../css/css.collector.css">
+	
+</head>
+<body>
+	<article class="mod-pub">
+		<section>
+			<h3>Flexbox</h3>
+			<table class="all-prop-table">
+				<tr>
+					<td>Свойство</td>
+					<td>Значения</td>
+					<td>Initial</td>
+					<td>Применяется</td>
+					<td>%</td>
+					<td>Описание</td>
+				</tr>
+				<tr>
+					<td><code>display</code></td>
+					<td>flex | inline-flex</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td><code>visibility</code></td>
+					<td>collapse</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td><code>flex-direction</code></td>
+					<td>row | row-reverse | column | column-reverse</td>
+					<td>row</td>
+					<td>flex-контейнер</td>
+					<td></td>
+					<td>направление flex-потока</td>
+				</tr>
+
+				<tr>
+					<td><code>flex-wrap</code></td>
+					<td>nowrap | wrap | wrap-reverse</td>
+					<td>nowrap</td>
+					<td>flex-контейнер</td>
+					<td></td>
+					<td>Перенос flex-строк</td>
+				</tr>
+
+				<tr>
+					<td><code>flex-flow</code></td>
+					<td>flex-direction || flex-wrap</td>
+					<td>row nowrap</td>
+					<td>flex-контейнер</td>
+					<td></td>
+					<td>сокращение для <code>flex-direction</code> и <code>flex-wrap</code></td>
+				</tr>
+
+				<tr>
+					<td><code>order</code></td>
+					<td>целое число</td>
+					<td>0</td>
+					<td>flex items and absolutely-positioned children of flex containers</td>
+					<td></td>
+					<td>Порядок элементов во flex-контейнере</td>
+				</tr>
+
+				<tr>
+					<td><code>flex</code></td>
+					<td>	none | [ <‘flex-grow’> <‘flex-shrink’>? || <‘flex-basis’> ] (initial | auto | none | положительное целое число) </td>
+					<td>1 0 auto</td>
+					<td>флекс-элементы</td>
+					<td></td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td><code>flex-grow</code></td>
+					<td>целое число</td>
+					<td>0</td>
+					<td>флекс-элементы</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><code>flex-shrink</code></td>
+					<td>целое число</td>
+					<td>1</td>
+					<td>флекс-элементы</td>
+					<td></td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td><code>flex-basis</code></td>
+					<td>content | <‘width’></td>
+					<td>	auto</td>
+					<td>флекс-элементы</td>
+					<td></td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td><code>justify-content</code></td>
+					<td>flex-start | flex-end | center | space-between | space-around</td>
+					<td>flex-start</td>
+					<td>flex-контейнер</td>
+					<td></td>
+					<td>выравнивание элементов по главной оси</td>
+				</tr>
+
+				<tr>
+					<td><code>align-items</code></td>
+					<td>flex-start | flex-end | center | baseline | stretch</td>
+					<td>flex-start</td>
+					<td>flex-контейнер</td>
+					<td></td>
+					<td>выравнивание элементов по поперечной оси</td>
+				</tr>
+
+				<tr>
+					<td><code>align-self</code></td>
+					<td>auto| flex-start | flex-end | center | baseline | stretch</td>
+					<td>flex-start</td>
+					<td>flex-элемент</td>
+					<td></td>
+					<td>выравнивание элемента по поперечной оси</td>
+				</tr>
+
+				<tr>
+					<td><code>align-content</code></td>
+					<td>flex-start | flex-end | center | space-between | space-around | stretch</td>
+					<td>	stretch</td>
+					<td>многострочные flex-контейнеры</td>
+					<td></td>
+					<td></td>
+				</tr>				
+					
+			</table>
+		</section>
+		<section>
+			<h3>CSS Image Values and Replaced Content Module Level 3</h3>
+			<p>
+				<a href="https://www.w3.org/TR/2012/CR-css3-images-20120417/">CSS Image Values and Replaced Content Module Level 3</a>
+			</p>
+			<section>
+				<h4>Единицы разрешения: тип <code class="val">resolution</code></h4>
+				<table>
+					<tr>
+						<td>dpi</td>
+						<td>dots per inch</td>
+					</tr>
+					<tr>
+						<td>dpcm</td>
+						<td>dots per centimeter</td>
+					</tr>
+					<tr>
+						<td>dppx</td>
+						<td>dots per ‘px’ unit</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h4>Значения изображений: тип <code class="val">image</code></h4>
+				<div class="code-plate">
+					<i class="val">image</i> = <i class="val">url</i> | <i class="val">image-list</i> | <i class="val">element-reference</i>  | <i class="val">gradient</i>
+				</div>
+			</section>
+		</section>
+	</article>
+</body>
+</html>

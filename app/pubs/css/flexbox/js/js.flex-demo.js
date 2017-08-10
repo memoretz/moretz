@@ -2,7 +2,7 @@
 
 	var inputsDirection = Array.prototype.slice.call(document.querySelectorAll('.demo5 input[type=radio]'));
 	
-	var flexContDirection = document.querySelector('.demo5 .flexbox1')
+	var flexContDirection = document.querySelector('.demo5 .flexbox1');
 	
 
 	inputsDirection.forEach(
@@ -16,7 +16,7 @@
 
 		var inputsWrap = Array.prototype.slice.call(document.querySelectorAll('.demo11 input[type=radio]'));
 	
-	var flexContWrap = document.querySelector('.demo11 .flexbox1')
+	var flexContWrap = document.querySelector('.demo11 .flexbox1');
 	
 
 	inputsWrap.forEach(
@@ -42,6 +42,21 @@
 					function(elem){
 						elem.style.flex = text;
 					});
+			}, false)
+		});
+
+	var inputsJC = Array.prototype.slice.call(document.querySelectorAll('input[name=justify-content]'));
+	
+	var flexContJC = document.querySelector('.demo21 .flexbox4')
+	
+
+	inputsJC.forEach(
+		function(elem){
+			elem.addEventListener('change', function(ev){
+				var text = elem.value;
+				
+			
+				flexContJC.style.justifyContent = text;
 			}, false)
 		});
 })();

@@ -21,8 +21,7 @@ main {
   position: relative;
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; }
+  flex-wrap: wrap; }
 
 .mod-pub {
   max-width: 1000px;
@@ -64,7 +63,9 @@ main {
     .mod-sidebar ul a {
       color: inherit; }
   .mod-sidebar li {
-    padding: 0.5em; }
+    padding: 0.5em;
+    width: 100%;
+    text-align: center; }
 
 .demo {
   margin: 1em 0;
@@ -92,7 +93,15 @@ caption {
 td {
   padding: 0 1em; }
 
+.all-prop-table tr:nth-child(2n) {
+  background-color: rgba(0, 0, 0, 0.1); }
+
 .js-api-table td:first-child {
   font-family: "Fira Mono", monospace; }
+
+.val:before {
+  content: "<"; }
+.val:after {
+  content: ">"; }
 
 /*# sourceMappingURL=css.transfer.css.map */

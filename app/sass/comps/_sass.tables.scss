@@ -10,6 +10,12 @@ td{
 
 }
 
+.all-prop-table{
+	tr:nth-child(2n){
+		background-color: rgba(0,0,0,0.1);
+	}
+}
+
 .js-api-table{
 	td:first-child{
 		font-family: $f-code;
